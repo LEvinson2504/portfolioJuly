@@ -1,13 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import MySelf from "../src/components/MySelf/MySelf"
+import NavBar from "../src/components/NavBar/NavBar"
+import BottomLinks from "../src/components/BottomLinks/BottomLinks"
+
+import { Row, Col, Button } from "antd"
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <>
+    <Row>
+      <Col span={24} className="navbar-top">
+        <NavBar />
+      </Col>
+      <Col span={24}>
+        <MySelf />
+      </Col>
+      <Col span={24}>
+      </Col>
+    </Row>
+    <div className="bottom-links">
+      <BottomLinks />
+    </div>
+  </>,
   document.getElementById('root')
 );
 
